@@ -110,7 +110,7 @@ One such result, for example, was:
 
 
 
-<img src="./img/chiocca-mandolin.jpg" alt="Image of Chiocca Filippo's Mandolin" width="300">
+<img src="./img/chiocca-mandolin.jpg" alt="Image of Chiocca Filippo's Mandolin" width="300"/>
 
 
 
