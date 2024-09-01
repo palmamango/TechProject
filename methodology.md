@@ -195,8 +195,7 @@ Here’s the response we received:
 
 
 ---
-
-
+<br>
 Based on this response, we identified the Tarantella as a key cultural event associated with the mandolin. This insight led us to query the ArCo Knowledge Graph to locate the entity representing the Tarantella:
 
 
@@ -220,3 +219,93 @@ The results of this query are visitable at the following URL: [Tarantella Query 
 The relevant entity was identified as:
 
 <[https://w3id.org/arco/resource/CulturalPropertyType/e4f56fbe7a9f93573f6464ea0aaea325](https://w3id.org/arco/resource/CulturalPropertyType/e4f56fbe7a9f93573f6464ea0aaea325)>
+
+
+### 2.3 Associating Mandolins with Historical Luthiers
+After identifying the Tarantella as a key cultural event linked to the mandolin, we turned to Large Language Models (LLMs) again for further enrichment. Specifically, we used [LLaMA 3.1](https://www.llama2.ai/) with a **[few-shot prompting technique](https://www.promptingguide.ai/techniques/fewshot)** to identify historical luthiers associated with the creation of mandolins in the context of the Neapolitan Tarantella. The model provided us with several names of renowned luthiers.
+
+
+> ### Prompt:
+> **Instrument**: Stradivari Violin
+> **Event**: Antonio Vivaldi Concerts
+> **Luthier**: Antonio Stradivari
+
+> **Question**: Can you provide a list of historical luthiers who crafted mandolins associated with the Neapolitan tarantella?
+
+
+
+> ### LLM Response:
+> Here is a list of historical luthiers who crafted mandolins associated with the **Neapolitan tarantella**:
+> 
+> 1. **Antonio Vinaccia (1660-1725)** - a Neapolitan luthier known for his mandolins and guitars.
+> 
+> 2. **Gaetano Vinaccia (1697-1777)** - son of Antonio Vinaccia, also a renowned luthier in Naples.
+> 
+> 3. **Gennaro Fabricatore (1672-1761)** - a Neapolitan luthier who built mandolins, guitars, and violins.
+> 
+> 4. **Alessandro Caiani (1680-1755)** - a luthier from Naples who crafted mandolins and other stringed instruments.
+> 
+> 5. **Raffaele Calace (1863-1934)** - a Neapolitan luthier and musician who built mandolins and guitars, and was known for his contributions to the tarantella tradition.
+
+
+<u>At this <a href="../img/few-shot.png">link</a> you can find a screenshot of the prompt we used.</u>
+
+---
+<br>
+
+
+With these names in hand, we proceeded to query the ArCo Knowledge Graph to find mandolins created by these luthiers.
+
+#### Query 6: Searching for "Vinaccia" Mandolins
+```sparql
+PREFIX arco: <https://w3id.org/arco/ontology/arco/>
+PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>
+
+SELECT DISTINCT ?mandolino ?label ?authorLabel
+WHERE {
+  ?mandolino rdf:type arco:MovableCulturalProperty;
+             rdfs:label ?label ;
+             a-cd:hasAuthor ?author .
+  ?author rdfs:label ?authorLabel .
+
+  FILTER (REGEX(?label, "mandolino", "i"))
+  FILTER (REGEX(?authorLabel, "vinaccia", "i"))
+}
+```
+The results of this query are visitable at the following URL: [Vinaccia Mandolins Query Results](https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fmandolino+%3Flabel+%3FauthorLabel%0D%0AWHERE+%7B%0D%0A++%3Fmandolino+rdf%3Atype+arco%3AMovableCulturalProperty%3B%0D%0A+++++++++++++rdfs%3Alabel+%3Flabel+%3B%0D%0A+++++++++++++a-cd%3AhasAuthor+%3Fauthor+.%0D%0A++%3Fauthor+rdfs%3Alabel+%3FauthorLabel+.%0D%0A%0D%0A++FILTER+%28REGEX%28%3Flabel%2C+%22mandolino%22%2C+%22i%22%29%29%0D%0A++FILTER+%28REGEX%28%3FauthorLabel%2C+%22vinaccia%22%2C+%22i%22%29%29%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on).
+
+#### Query 7: Searching for "Calace" Mandolins
+```sparql
+PREFIX arco: <https://w3id.org/arco/ontology/arco/>
+PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>
+
+SELECT DISTINCT ?mandolino ?label ?authorLabel
+WHERE {
+  ?mandolino rdf:type arco:MovableCulturalProperty;
+             rdfs:label ?label ;
+             a-cd:hasAuthor ?author .
+  ?author rdfs:label ?authorLabel .
+
+  FILTER (REGEX(?label, "mandolino", "i"))
+  FILTER (REGEX(?authorLabel, "calace", "i"))
+}
+```
+The results of this query are visitable at the following URL: [Calace Mandolins Query Results](https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fmandolino+%3Flabel+%3FauthorLabel%0D%0AWHERE+%7B%0D%0A++%3Fmandolino+rdf%3Atype+arco%3AMovableCulturalProperty%3B%0D%0A+++++++++++++rdfs%3Alabel+%3Flabel+%3B%0D%0A+++++++++++++a-cd%3AhasAuthor+%3Fauthor+.%0D%0A++%3Fauthor+rdfs%3Alabel+%3FauthorLabel+.%0D%0A%0D%0A++FILTER+%28REGEX%28%3Flabel%2C+%22mandolino%22%2C+%22i%22%29%29%0D%0A++FILTER+%28REGEX%28%3FauthorLabel%2C+%22calace%22%2C+%22i%22%29%29%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on).
+
+#### Query 8: Searching for "Fabricatore" Mandolins
+```sparql
+PREFIX arco: <https://w3id.org/arco/ontology/arco/>
+PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>
+
+SELECT DISTINCT ?mandolino ?label ?authorLabel
+WHERE {
+  ?mandolino rdf:type arco:MovableCulturalProperty;
+             rdfs:label ?label ;
+             a-cd:hasAuthor ?author .
+  ?author rdfs:label ?authorLabel .
+
+  FILTER (REGEX(?label, "mandolino", "i"))
+  FILTER (REGEX(?authorLabel, "fabricatore", "i"))
+}
+```
+The results of this query are visitable at the following URL: [Fabricatore Mandolins Query Results](https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fmandolino+%3Flabel+%3FauthorLabel%0D%0AWHERE+%7B%0D%0A++%3Fmandolino+rdf%3Atype+arco%3AMovableCulturalProperty%3B%0D%0A+++++++++++++rdfs%3Alabel+%3Flabel+%3B%0D%0A+++++++++++++a-cd%3AhasAuthor+%3Fauthor+.%0D%0A++%3Fauthor+rdfs%3Alabel+%3FauthorLabel+.%0D%0A%0D%0A++FILTER+%28REGEX%28%3Flabel%2C+%22mandolino%22%2C+%22i%22%29%29%0D%0A++FILTER+%28REGEX%28%3FauthorLabel%2C+%22fabricatore%22%2C+%22i%22%29%29%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on).
