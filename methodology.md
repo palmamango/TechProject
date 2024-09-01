@@ -109,7 +109,8 @@ One such result, for example, was:
 - [Mandolino: Chiocca Filippo](https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/1200066104.html)
 
 
-![Image of Chiocca Filippo's Mandolin](./img//chiocca-mandolin.jpg)
+
+<img src="./img/chiocca-mandolin.jpg" alt="Image of Chiocca Filippo's Mandolin" width="300">
 
 
 
@@ -132,7 +133,7 @@ Upon identifying an entity representing the mandolin by Chiocca Filippo (as well
 #### Triple 2
 
 ```rdf
-[<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1200066113>](https://w3id.org/arco/resource/HistoricOrArtisticProperty/1200066113)
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1200066113>
     
     rdf:type
     
