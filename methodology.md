@@ -109,7 +109,7 @@ One such result, for example, was:
 - [Mandolino: Chiocca Filippo](https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/1200066104.html)
 
 
-![Image of Chiocca Filippo's Mandolin](./img//chiocca-mandolin.jpg)
+![Image of Chiocca Filippo's Mandolin](./img//chiocca-mandolin-small.jpg)
 
 
 
