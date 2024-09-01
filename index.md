@@ -2,8 +2,6 @@
 layout: home
 ---
 
-# ITSkills Project
-
 Welcome to the homepage of our Information Technology Skills final project. Our work focuses on enriching the ArCo Knowledge Graph with new RDF triples related to Italy's musical heritage.
 
 ## Technologies and Tools Used
