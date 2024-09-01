@@ -144,6 +144,8 @@ In the second triple, we performed the same operation as in the first one, but w
 
 ### 2.2 Linking Instruments to Cultural Events
 
+In our exploration, we decided to focus specifically on the mandolin for further enrichment because it was the instrument that, in our initial queries ([Query 3](#query-3)), was not connected to the `arco:MusicHeritage` class. This indicated potential gaps in its representation within the ArCo Knowledge Graph, which suggested that there might be other important cultural and historical connections missing as well.
+
 Before performing the SPARQL query, we utilized a Large Language Model (LLM) to explore potential historical events or cultural practices in Italy that could be linked to the mandolin. The prompt we used in the LLM was:
 
 > ### Prompt:
