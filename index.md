@@ -10,8 +10,8 @@ Welcome to the homepage of our Information Technology Skills final project. Our 
 - **ArCo Ontologies**: Utilized to explore and enrich the cultural data.
 - **GitHub**: For website hosting and project collaboration.
 - **Large Language Models (LLMs)**: 
-  - ChatGPT (GPT 3.5 Turbo)
-  - LLaMA 3.1
+  - [ChatGPT (GPT 4o)](https://chatgpt.com/)
+  - [LLaMA 3.1](https://www.llama2.ai/)
 - **Prompting Techniques**:
   - Zero-shot
   - Few-shot
