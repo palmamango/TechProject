@@ -43,7 +43,11 @@ todo
 - Ilenia Pellicone
 - Sofia Elisa Catrini
 
+##
+
 ---
+
+##
 
 This project is part of the Master's degree course in Language, Society, and Communication at the University of Bologna, and it has been developed with the aim of contributing to the preservation and digital representation of Italian cultural heritage.
 
