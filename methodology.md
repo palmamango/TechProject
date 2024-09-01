@@ -147,16 +147,14 @@ In the second triple, we performed the same operation as in the first one, but w
 
 Before performing the SPARQL query, we utilized a Large Language Model (LLM) to explore potential historical events or cultural practices in Italy that could be linked to the mandolin. The prompt we used in the LLM was:
 
-**Prompt:**
+> ### Prompt:
 > What historical events or cultural practices in Italy could be linked to the mandolin? Let’s think step by step.
 
 
 The LLM, specifically GPT-4o, provided a comprehensive response, outlining various cultural and historical aspects related to the mandolin in Italy. 
-We employed a **Chain of Thought prompting technique**, specifically using a [zero-shot approach combined with Chain of Thought reasoning](https://www.promptingguide.ai/techniques/cot#zero-shot-cot-prompting#zero-shot-cot-prompting). This technique allowed the model to generate a step-by-step analysis, ensuring that the connections made were logical and detailed.
+We employed a **Chain of Thought prompting technique**, specifically using a [zero-shot approach combined with Chain of Thought reasoning](https://www.promptingguide.ai/techniques/cot#zero-shot-cot-prompting). This technique allowed the model to generate a step-by-step analysis, ensuring that the connections made were logical and detailed.
 
 Here’s the response we received:
-
-**LLM Response**:
 
 > ### LLM Response:
 > 
@@ -195,4 +193,10 @@ Here’s the response we received:
 > **Summary:** The mandolin is deeply intertwined with Italian history and culture, from its origins in the lute family to its role in folk music, classical compositions, and national identity during the Risorgimento. It has been a symbol of Italian romance, a tool for political expression, and a cultural ambassador as Italians migrated worldwide. Today, the mandolin remains a vibrant part of Italy's musical landscape, celebrated in festivals and performances that honor its historical and cultural significance.
 
 
+
+[ ![](./img/cot-small.png) ](./img/cot-large.png)
+
 ---
+
+
+Based on this response, we identified the Tarantella as a key cultural event associated with the mandolin. This insight led us to query the ArCo Knowledge Graph to locate the entity representing the Tarantella:
