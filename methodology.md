@@ -88,6 +88,8 @@ The results of this query are visitable at the following URL: [Mandolino Query R
 Finding no results under the `arco:MusicHeritage` class, as shown in [Query 3](#query-3), we expanded our search to include the parent class, `arco:MovableCulturalProperty`. This query successfully identified several instances of *'mandolino'* under this broader category, although some of these instances did not specifically refer to a musical instrument.
 
 
+#### Query 4
+
 ```sparql
 PREFIX arco: <https://w3id.org/arco/ontology/arco/>
 
@@ -105,3 +107,36 @@ The results of this query are visitable at the following URL: [MovableCulturalPr
 One such result, for example, was:
 
 - [Mandolino: Chiocca Filippo](https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/1200066104.html)
+
+
+![Image of Chiocca Filippo's Mandolin](./img//chiocca-mandolin.jpg)
+
+
+
+## Creating RDF Triples to Enrich the ArCo KG
+
+### 2.1 Assigning the Correct Class
+
+Upon identifying an entity representing the mandolin by Chiocca Filippo (as well as the other mandolins), we noted that it lacked a connection to the arco:MusicHeritage class. To address this, we created new RDF triples to establish this link:
+
+#### Triple 1
+
+```rdf
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1200066112>
+    
+    rdf:type
+
+<https://w3id.org/arco/ontology/arco/MusicHeritage> 
+```
+
+#### Triple 2
+
+```rdf
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1200066113>
+    
+    rdf:type
+    
+<https://w3id.org/arco/ontology/arco/MusicHeritage>
+
+```
+
