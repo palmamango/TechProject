@@ -46,6 +46,8 @@ todo
 
 Learn more about our team and the collaborative efforts behind this project on the [About Us](./about.md) page.
 
+<br>
+
 ---
 
 <br>
