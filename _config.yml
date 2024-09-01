@@ -1,6 +1,4 @@
-remote_theme: broccolini/swiss
-plugins:
-- jekyll-remote-theme 
+theme: minima
 title: IT Skills Project
 description: Information Technology Skills project (group 9)
 
