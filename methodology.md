@@ -109,8 +109,8 @@ One such result, for example, was:
 - [Mandolino: Chiocca Filippo](https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/1200066104.html)
 
 
+![Image of Chiocca Filippo's Mandolin](./img//chiocca-mandolin.jpg)
 
-<img src="./img/chiocca-mandolin.jpg" alt="Image of Chiocca Filippo's Mandolin" width="300"/>
 
 
 
