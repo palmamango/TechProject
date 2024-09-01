@@ -138,7 +138,6 @@ Upon identifying an entity representing the mandolin by Chiocca Filippo (as well
     rdf:type
     
 <https://w3id.org/arco/ontology/arco/MusicHeritage>
-
 ```
 In the second triple, we performed the same operation as in the first one, but with a different mandolin: the [mandolin by Iovine Antonio (18th/19th century)](https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/1200066121.html).
 
@@ -194,7 +193,7 @@ Here’s the response we received:
 
 
 
-[ ![](./img/cot-small.png) ](./img/cot-large.png)
+[ ![](./img/cot-small.png) ](../img/cot-large.png)
 
 ---
 
