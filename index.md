@@ -30,7 +30,7 @@ The **Music Heritage** project is part of an academic initiative to explore and 
 
 ## Methodology
 
-Explore the detailed steps we took, from querying the ArCo Knowledge Graph to enriching it using advanced prompting techniques with various LLMs in the [Methodology](./methodology.md) section.
+Explore the detailed steps we took, from querying the ArCo Knowledge Graph to enriching it using several prompting techniques with various LLMs in the [Methodology](./methodology.md) section.
 
 ## Conclusions
 
