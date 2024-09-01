@@ -231,7 +231,7 @@ After identifying the Tarantella as a key cultural event linked to the mandolin,
 > **Instrument**: Stradivari Violin
 > **Event**: Antonio Vivaldi Concerts
 > **Luthier**: Antonio Stradivari
-
+>
 > **Question**: Can you provide a list of historical luthiers who crafted mandolins associated with the Neapolitan tarantella?
 
 
