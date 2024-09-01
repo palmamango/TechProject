@@ -148,44 +148,47 @@ In the second triple, we performed the same operation as in the first one, but w
 Before performing the SPARQL query, we utilized a Large Language Model (LLM) to explore potential historical events or cultural practices in Italy that could be linked to the mandolin. The prompt we used in the LLM was:
 
 **Prompt:**
-
+```
 What historical events or cultural practices in Italy could be linked to the mandolin? Let’s think step by step.
-
+```
 
 The LLM, specifically GPT-4o, provided a comprehensive response, outlining various cultural and historical aspects related to the mandolin in Italy. 
 We employed a **Chain of Thought prompting technique**, specifically using a [zero-shot approach combined with Chain of Thought reasoning](https://www.promptingguide.ai/techniques/cot#zero-shot-cot-prompting#zero-shot-cot-prompting). This technique allowed the model to generate a step-by-step analysis, ensuring that the connections made were logical and detailed.
 
 Here’s the response we received:
 
+**LLM Response**:
 
-**LLM Response:**
+```markdown
 
-1. Origins and Development of the Mandolin
+#### 1. Origins and Development of the Mandolin
 
 - **Lute Family:** The mandolin is a descendant of the lute family, which has roots in various ancient stringed instruments from the Mediterranean and Middle Eastern regions. The mandolin, as we recognize it today, started to take shape in Italy during the 17th and 18th centuries.
 - **Neapolitan Mandolin:** The most recognized form of the mandolin is the Neapolitan mandolin, developed in Naples in the 18th century. The city became a major center for the production of mandolins, influencing the design and sound of the instrument globally.
 
-2. Cultural and Social Influence in Italy
+#### 2. Cultural and Social Influence in Italy
 
 - **Folk Music:** The mandolin became a key instrument in Italian folk music, particularly in southern Italy. It was used in traditional dances like the Tarantella, a lively folk dance that has roots in ancient healing rituals.
 - **Opera and Classical Music:** The mandolin also found its place in classical music. Composers like Vivaldi and Mozart wrote pieces for the mandolin, integrating it into the broader European classical music tradition. Vivaldi's mandolin concertos are particularly well-known.
 - **Serenades and Courtship:** In Italian culture, especially during the 18th and 19th centuries, the mandolin was often associated with serenades. A young man might use the mandolin to serenade his beloved, a practice that became a romantic symbol in Italy.
 
-3. Historical Events and Mandolin Influence
+#### 3. Historical Events and Mandolin Influence
 
 - **Italian Unification (Risorgimento):** During the 19th century, the period of the Italian unification, the mandolin was a popular instrument among the populace. Folk songs and ballads played on the mandolin often carried themes of national identity and unity, contributing to the cultural fabric of the Risorgimento.
 - **Migration and Global Influence:** The late 19th and early 20th centuries saw large waves of Italian emigration, particularly to the Americas. Italian immigrants brought the mandolin with them, influencing the music of places like the United States, where the mandolin became a fixture in bluegrass music and other genres.
 
-4. 20th Century and Popular Culture
+#### 4. 20th Century and Popular Culture
 
 - **Cinema and Music:** In the 20th century, the mandolin continued to symbolize Italian culture, appearing in films and music. Italian cinema often used the mandolin to evoke a sense of nostalgia or to underscore scenes of traditional Italian life.
 - **Modern Italian Folk Revival:** The mandolin saw a resurgence in the late 20th century as part of a broader revival of interest in folk music. This period saw renewed appreciation for traditional Italian music and instruments, with the mandolin often at the center.
 
-5. Contemporary Italian Cultural Practices
+#### 5. Contemporary Italian Cultural Practices
 
 - **Music Festivals:** Today, the mandolin is celebrated in numerous music festivals across Italy, particularly in regions like Campania and Sicily. These festivals often focus on traditional music, but also showcase modern compositions for the mandolin.
 - **Mandolin Orchestras:** In some Italian regions, mandolin orchestras are a significant cultural institution, preserving the art of mandolin playing and continuing its development into contemporary music genres.
 
 **Summary:** The mandolin is deeply intertwined with Italian history and culture, from its origins in the lute family to its role in folk music, classical compositions, and national identity during the Risorgimento. It has been a symbol of Italian romance, a tool for political expression, and a cultural ambassador as Italians migrated worldwide. Today, the mandolin remains a vibrant part of Italy's musical landscape, celebrated in festivals and performances that honor its historical and cultural significance.
 
+```
 
+---
