@@ -311,3 +311,29 @@ WHERE {
 }
 ```
 The results of this query are visitable at the following URL: [Fabricatore Mandolins Query Results](https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fmandolino+%3Flabel+%3FauthorLabel%0D%0AWHERE+%7B%0D%0A++%3Fmandolino+rdf%3Atype+arco%3AMovableCulturalProperty%3B%0D%0A+++++++++++++rdfs%3Alabel+%3Flabel+%3B%0D%0A+++++++++++++a-cd%3AhasAuthor+%3Fauthor+.%0D%0A++%3Fauthor+rdfs%3Alabel+%3FauthorLabel+.%0D%0A%0D%0A++FILTER+%28REGEX%28%3Flabel%2C+%22mandolino%22%2C+%22i%22%29%29%0D%0A++FILTER+%28REGEX%28%3FauthorLabel%2C+%22fabricatore%22%2C+%22i%22%29%29%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on).
+
+
+### 2.4 Linking Mandolins to the Tarantella
+Based on the results from these queries, we identified mandolins crafted by these luthiers and linked them to the Tarantella using the `a-dd:hasCulturalPropertyType` predicate. Below are the RDF triples we created to establish these connections:
+
+#### Triple 3
+```rdf
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1200066236>
+    a-dd:hasCulturalPropertyType
+<https://w3id.org/arco/resource/CulturalPropertyType/e4f56fbe7a9f93573f6464ea0aaea325>
+``` 
+#### Triple 4
+```rdf
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500556985>
+    a-dd:hasCulturalPropertyType
+<https://w3id.org/arco/resource/CulturalPropertyType/e4f56fbe7a9f93573f6464ea0aaea325>
+```
+#### Triple 5
+```rdf
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1200066113>
+    a-dd:hasCulturalPropertyType
+    <https://w3id.org/arco/resource/CulturalPropertyType/e4f56fbe7a9f93573f6464ea0aaea325> .
+```
+
+
+It is important to note that, similar to the previous instances of the mandolin, these particular mandolins also lack a connection to the arco:MusicHeritage class. This connection can be made by creating additional RDF triples in a manner analogous to what we have done earlier ([Triple 1 - 2](#triple-1)). However, to avoid redundancy, we have not included these additional triples here.
