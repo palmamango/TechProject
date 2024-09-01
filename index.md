@@ -9,6 +9,7 @@ Welcome to the homepage of our Information Technology Skills final project. Our 
 - **SPARQL**: For querying and extracting data from the ArCo Knowledge Graph.
 - **ArCo Ontologies**: Utilized to explore and enrich the cultural data.
 - **GitHub**: For website hosting and creation.
+- **Google Meet**: For virtual meetings and collaboration.
 - **Large Language Models (LLMs)**: 
   - [ChatGPT (GPT 4o)](https://chatgpt.com/)
   - [LLaMA 3.1](https://www.llama2.ai/)
@@ -36,16 +37,15 @@ Explore the detailed steps we took, from querying the ArCo Knowledge Graph to en
 
 todo
 
-## Team Members
+---
 
-- Palma Mango
-- Serena Campaniello
-- Ilenia Pellicone
-- Sofia Elisa Catrini
+## The Team
 
-
+Learn more about our team and the collaborative efforts behind this project on the [About Us](./about.md) page.
 
 ---
+
+
 
 
 
