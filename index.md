@@ -37,6 +37,8 @@ Explore the detailed steps we took, from querying the ArCo Knowledge Graph to en
 
 todo
 
+<br><br>
+
 ---
 
 ## The Team
@@ -45,9 +47,7 @@ Learn more about our team and the collaborative efforts behind this project on t
 
 ---
 
-
-
-
+<br><br>
 
 *This project is part of the Master's degree course in Language, Society, and Communication at the University of Bologna, and it has been developed with the aim of contributing to the preservation and digital representation of Italian cultural heritage.*
 
