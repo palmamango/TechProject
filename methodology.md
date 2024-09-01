@@ -191,10 +191,32 @@ Here’s the response we received:
 > 
 > **Summary:** The mandolin is deeply intertwined with Italian history and culture, from its origins in the lute family to its role in folk music, classical compositions, and national identity during the Risorgimento. It has been a symbol of Italian romance, a tool for political expression, and a cultural ambassador as Italians migrated worldwide. Today, the mandolin remains a vibrant part of Italy's musical landscape, celebrated in festivals and performances that honor its historical and cultural significance.
 
-<u>At this <a href="./img/cot.png">link</a> you can find a screenshot of the prompt we used.</u>
+<u>At this <a href="../img/cot.png">link</a> you can find a screenshot of the prompt we used.</u>
 
 
 ---
 
 
 Based on this response, we identified the Tarantella as a key cultural event associated with the mandolin. This insight led us to query the ArCo Knowledge Graph to locate the entity representing the Tarantella:
+
+
+#### Query 5
+
+```sparql
+PREFIX arco: <https://w3id.org/arco/ontology/arco/>
+PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/>
+
+SELECT DISTINCT ?property ?label
+WHERE {
+	?property a a-dd:CulturalPropertyType;
+                    	rdfs:label ?label .
+	FILTER(REGEX(?label, "tarantella", "i"))
+ 
+ }
+```
+
+The results of this query are visitable at the following URL: [Tarantella Query Results](https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fproperty+%3Flabel%0D%0AWHERE+%7B%0D%0A%09%3Fproperty+a+a-dd%3ACulturalPropertyType%3B%0D%0A++++++++++++++++++++%09rdfs%3Alabel+%3Flabel+.%0D%0A%09FILTER%28REGEX%28%3Flabel%2C+%22tarantella%22%2C+%22i%22%29%29%0D%0A+%0D%0A+%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on).
+
+The relevant entity was identified as:
+
+<[https://w3id.org/arco/resource/CulturalPropertyType/e4f56fbe7a9f93573f6464ea0aaea325](https://w3id.org/arco/resource/CulturalPropertyType/e4f56fbe7a9f93573f6464ea0aaea325)>
