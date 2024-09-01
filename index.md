@@ -1,9 +1,0 @@
----
-layout: default
----
-
-# ITSkills Project
-
-
-
-
