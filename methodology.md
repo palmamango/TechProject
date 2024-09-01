@@ -332,7 +332,7 @@ Based on the results from these queries, we identified mandolins crafted by thes
 ```rdf
 <https://w3id.org/arco/resource/HistoricOrArtisticProperty/1200066113>
     a-dd:hasCulturalPropertyType
-    <https://w3id.org/arco/resource/CulturalPropertyType/e4f56fbe7a9f93573f6464ea0aaea325> .
+<https://w3id.org/arco/resource/CulturalPropertyType/e4f56fbe7a9f93573f6464ea0aaea325> .
 ```
 
 
