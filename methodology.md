@@ -14,7 +14,7 @@ We began by exploring the `arco:MusicHeritage` class to list its elements. The g
 
 #### Query 1
 
-```
+```sparql
 PREFIX arco: <https://w3id.org/arco/ontology/arco/>
 SELECT DISTINCT ?instrument ?label
 WHERE {
