@@ -14,7 +14,7 @@ We began by exploring the `arco:MusicHeritage` class to list its elements. The g
 
 #### Query 1
 
-```
+```sparql
 PREFIX arco: <https://w3id.org/arco/ontology/arco/>
 SELECT DISTINCT ?instrument ?label
 WHERE {
@@ -194,7 +194,7 @@ Here’s the response we received:
 > **Summary:** The mandolin is deeply intertwined with Italian history and culture, from its origins in the lute family to its role in folk music, classical compositions, and national identity during the Risorgimento. It has been a symbol of Italian romance, a tool for political expression, and a cultural ambassador as Italians migrated worldwide. Today, the mandolin remains a vibrant part of Italy's musical landscape, celebrated in festivals and performances that honor its historical and cultural significance.
 
 <u>At this <a href="../img/cot.png">link</a> you can find a screenshot of the prompt we used.</u>
-
+*At this [link](../img/cot.png) you can find a screenshot of the prompt we used.*
 
 ---
 <br>
