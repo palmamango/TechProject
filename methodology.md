@@ -446,4 +446,4 @@ To begin, we used LLaMA 3.1 with a zero-shot prompting technique to obtain detai
 > Their instruments are still highly regarded today for their craftsmanship and tone quality.
 > I hope this information helps!
 
-*At this [link](../img/generated-knowledge.png) you can find a screenshot of the prompt we used.*
+*At this [link](../img/zero-shot-llama.jpg) you can find a screenshot of the prompt we used.*
