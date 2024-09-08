@@ -487,7 +487,7 @@ WHERE {
   FILTER regex(?label, "Vinaccia", "i")
 }
 ```
-To accurately represent the familial and professional connections, we created RDF triples using the predicate a-cd:hasRelatedAgent to link Gaetano Vinaccia to his relatives:
+To accurately represent the familial and professional connections, we created RDF triples using the predicate `a-cd:hasRelatedAgent` to link Gaetano Vinaccia to his relatives:
 
 #### Triple 9
 ```rdf
