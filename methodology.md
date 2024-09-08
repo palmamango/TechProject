@@ -388,6 +388,24 @@ We proceeded to add the following entities to the Knowledge Graph to represent t
 - Bone Carving ("Osso intaglio")
 - Glued ("Incollato")
 
+Through these queries:
+
+#### Query 9
+
+```sparql
+PREFIX arco: <https://w3id.org/arco/ontology/arco/>
+PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/>
+
+SELECT DISTINCT ?technique ?techniqueLabel
+WHERE {
+  ?technique rdf:type a-dd:TechnicalCharacteristic ;
+             rdfs:label ?techniqueLabel .
+  FILTER (REGEX(?techniqueLabel, "tartaruga", "i"))
+}
+ORDER BY ?techniqueLabel
+```
+
+
 These entities were linked to the mandolin entity using the predicate `a-dd:hasMaterialOrTechnique`, as illustrated below:
 
 #### Triple 6:
