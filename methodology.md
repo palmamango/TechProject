@@ -114,7 +114,7 @@ One such result, for example, was:
 
 
 
-## Creating RDF Triples to Enrich the ArCo KG
+## Step 2: Creating RDF Triples to Enrich the ArCo KG
 
 ### 2.1 Assigning the Correct Class
 
@@ -342,7 +342,7 @@ Based on the results from these queries, we identified mandolins crafted by thes
 
 It is important to note that, similar to the previous instances of the mandolin, these particular mandolins also lack a connection to the arco:MusicHeritage class. This connection can be made by creating additional RDF triples in a manner analogous to what we have done earlier ([Triple 1 - 2](#triple-1)). However, to avoid redundancy, we have not included these additional triples here.
 
-## Enriching the Knowledge Graph with Mandolin Construction Techniques
+## Step 3: Enriching the Knowledge Graph with Mandolin Construction Techniques
 After utilizing the generated knowledge technique via GPT-4o to gather information on the construction techniques used by Gaetano Vinaccia for his mandolins, we decided to add additional entities to the ArCo Knowledge Graph, representing the specific materials and techniques used in the construction of these instruments. These techniques were linked to the mandolin entity through the predicate `a-dd:hasMaterialOrTechnique`.
 
 > ### Prompt:
@@ -421,7 +421,7 @@ a-dd:hasMaterialOrTechnique
 ```
 
 
-## Shifting Focus to the Vinaccia Family of Luthiers
+## Step 4: Shifting Focus to the Vinaccia Family of Luthiers
 In the next phase of our project, we shifted our focus from the works themselves to the authors. From previous prompts, we knew that the Vinaccia family consisted of multiple luthiers. While exploring the page for Gaetano Vinaccia, we noticed that there were no links to other family members who were also involved in the same profession.
 
 ### 4.1 Initial Research and Errors
