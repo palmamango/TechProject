@@ -123,7 +123,7 @@ Upon identifying an entity representing the mandolin by Chiocca Filippo (as well
 #### Triple 1
 
 ```rdf
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1200066112>
+<https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/1200066104.html>
     
     rdf:type
 
