@@ -404,6 +404,8 @@ WHERE {
 }
 ORDER BY ?techniqueLabel
 ```
+The results of this query are visitable at the following URL: [Turtle shell inlay query] (https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Ftechnique+%3FtechniqueLabel%0D%0AWHERE+%7B%0D%0A++%3Ftechnique+rdf%3Atype+a-dd%3ATechnicalCharacteristic+%3B%0D%0A+++++++++++++rdfs%3Alabel+%3FtechniqueLabel+.%0D%0A++FILTER+%28REGEX%28%3FtechniqueLabel%2C+%22tartaruga%22%2C+%22i%22%29%29%0D%0A%7D%0D%0AORDER+BY+%3FtechniqueLabel&format=text%2Fhtml&timeout=0&signal_void=on).
+
 #### Query 10
 
 ```sparql
@@ -418,6 +420,7 @@ WHERE {
 }
 ORDER BY ?techniqueLabel
 ```
+The results of this query are visitable at the following URL: [Bone carving query] (https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Ftechnique+%3FtechniqueLabel%0D%0AWHERE+%7B%0D%0A++%3Ftechnique+rdf%3Atype+a-dd%3ATechnicalCharacteristic+%3B%0D%0A+++++++++++++rdfs%3Alabel+%3FtechniqueLabel+.%0D%0A++FILTER+%28REGEX%28%3FtechniqueLabel%2C+%22osso%22%2C+%22i%22%29%29%0D%0A%7D%0D%0AORDER+BY+%3FtechniqueLabel&format=text%2Fhtml&timeout=0&signal_void=on).
 
 #### Query 11
 
@@ -433,6 +436,7 @@ WHERE {
 }
 ORDER BY ?techniqueLabel
 ```
+The results of this query are visitable at the following URL: [Glued query] (https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Ftechnique+%3FtechniqueLabel%0D%0AWHERE+%7B%0D%0A++%3Ftechnique+rdf%3Atype+a-dd%3ATechnicalCharacteristic+%3B%0D%0A+++++++++++++rdfs%3Alabel+%3FtechniqueLabel+.%0D%0A++FILTER+%28REGEX%28%3FtechniqueLabel%2C+%22incollato%22%2C+%22i%22%29%29%0D%0A%7D%0D%0AORDER+BY+%3FtechniqueLabel&format=text%2Fhtml&timeout=0&signal_void=on).
 
 These entities were linked to the mandolin entity using the predicate `a-dd:hasMaterialOrTechnique`, as illustrated below:
 
