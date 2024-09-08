@@ -375,3 +375,44 @@ After utilizing the generated knowledge technique via GPT-4o to gather informati
 > The combination of skilled handwork, careful material selection, and the artistic application of decorative elements resulted in instruments that were highly prized in their time and remain valuable today.
 
 *At this [link](../img/generated-knowledge.png) you can find a screenshot of the prompt we used.*
+
+### 3.1  RDF Triples for Construction Techniques
+We proceeded to add the following entities to the Knowledge Graph to represent the construction techniques:
+
+- Turtle Shell Inlay ("Tartaruga a intarsio")
+- Bone Carving ("Osso intaglio")
+- Glued ("Incollato")
+
+These entities were linked to the mandolin entity using the predicate `a-dd:hasMaterialOrTechnique`, as illustrated below:
+
+#### Triple 6:
+```rdf
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1200066236>
+
+a-dd:hasMaterialOrTechnique
+
+<https://w3id.org/arco/resource/TechnicalCharacteristic/tartaruga-a-intarsio>
+``` 
+
+#### Triple 7:
+
+```rdf
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1200066236>
+
+a-dd:hasMaterialOrTechnique
+
+<https://w3id.org/arco/resource/Lombardia/TechnicalCharacteristic/osso-intaglio>
+```
+
+
+#### Triple 8:
+
+```rdf
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1200066236>
+
+a-dd:hasMaterialOrTechnique
+
+<https://w3id.org/arco/resource/AltoAdige/TechnicalCharacteristic/incollato>
+```
+
+
