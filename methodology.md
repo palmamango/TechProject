@@ -250,7 +250,7 @@ After identifying the Tarantella as a key cultural event linked to the mandolin,
 > 5. **Raffaele Calace (1863-1934)** - a Neapolitan luthier and musician who built mandolins and guitars, and was known for his contributions to the tarantella tradition.
 
 
-<u>At this <a href="../img/few-shot.png">link</a> you can find a screenshot of the prompt we used.</u>
+*At this [link](../img/few-shot.png) you can find a screenshot of the prompt we used.*
 
 ---
 <br>
@@ -374,3 +374,5 @@ After utilizing the generated knowledge technique via GPT-4o to gather informati
 > Neapolitan Lutherie Tradition:
 > The Vinaccia family, along with other prominent Neapolitan luthiers, was known for its refined techniques and attention to detail, often incorporating elaborate decorations and high-quality materials. Naples was a hub for musical instrument production, and luthiers there were influenced by both local traditions and broader European trends. The use of turtle shell and bone, as seen in Vinaccia’s mandolin, reflects the opulence and craftsmanship that characterized the period, making these instruments not just musical tools but also works of art.
 > The combination of skilled handwork, careful material selection, and the artistic application of decorative elements resulted in instruments that were highly prized in their time and remain valuable today.
+
+*At this [link](../img/generated-knowledge.png) you can find a screenshot of the prompt we used.*
