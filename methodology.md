@@ -262,18 +262,23 @@ With these names in hand, we proceeded to query the ArCo Knowledge Graph to find
 PREFIX arco: <https://w3id.org/arco/ontology/arco/>
 PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>
 
-SELECT DISTINCT ?mandolino ?label ?authorLabel
+SELECT DISTINCT ?mandolino ?label ?authorLabel ?description
 WHERE {
-  ?mandolino rdf:type arco:MovableCulturalProperty;
+  ?mandolino rdf:type arco:MovableCulturalProperty ;
              rdfs:label ?label ;
              a-cd:hasAuthor ?author .
   ?author rdfs:label ?authorLabel .
 
   FILTER (REGEX(?label, "mandolino", "i"))
   FILTER (REGEX(?authorLabel, "vinaccia", "i"))
+
+  OPTIONAL { ?mandolino core:description ?description }
 }
+ORDER BY (?label)
+LIMIT 50
+
 ```
-The results of this query are visitable at the following URL: [Vinaccia Mandolins Query Results](https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fmandolino+%3Flabel+%3FauthorLabel%0D%0AWHERE+%7B%0D%0A++%3Fmandolino+rdf%3Atype+arco%3AMovableCulturalProperty%3B%0D%0A+++++++++++++rdfs%3Alabel+%3Flabel+%3B%0D%0A+++++++++++++a-cd%3AhasAuthor+%3Fauthor+.%0D%0A++%3Fauthor+rdfs%3Alabel+%3FauthorLabel+.%0D%0A%0D%0A++FILTER+%28REGEX%28%3Flabel%2C+%22mandolino%22%2C+%22i%22%29%29%0D%0A++FILTER+%28REGEX%28%3FauthorLabel%2C+%22vinaccia%22%2C+%22i%22%29%29%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on).
+The results of this query are visitable at the following URL: [Vinaccia Mandolins Query Results](https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fmandolino+%3Flabel+%3FauthorLabel+%3Fdescription%0D%0AWHERE+%7B%0D%0A++%3Fmandolino+rdf%3Atype+arco%3AMovableCulturalProperty+%3B%0D%0A+++++++++++++rdfs%3Alabel+%3Flabel+%3B%0D%0A+++++++++++++a-cd%3AhasAuthor+%3Fauthor+.%0D%0A++%3Fauthor+rdfs%3Alabel+%3FauthorLabel+.%0D%0A%0D%0A++FILTER+%28REGEX%28%3Flabel%2C+%22mandolino%22%2C+%22i%22%29%29%0D%0A++FILTER+%28REGEX%28%3FauthorLabel%2C+%22vinaccia%22%2C+%22i%22%29%29%0D%0A%0D%0A++OPTIONAL+%7B+%3Fmandolino+core%3Adescription+%3Fdescription+%7D%0D%0A%7D%0D%0AORDER+BY+%28%3Flabel%29%0D%0ALIMIT+50%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on).
 
 #### Query 7: Searching for "Calace" Mandolins
 ```sparql
@@ -436,12 +441,13 @@ To begin, we used LLaMA 3.1 with a zero-shot prompting technique to obtain detai
 > Gaetano Vinaccia (1759–1831) was indeed a renowned Italian luthier from Naples.
 > After conducting research, I found that he came from a family of skilled craftsmen, including several relatives who were also involved in the creation of musical instruments.
 > Here are a few notable family members who shared his profession as a luthier:
-> Gennaro Vinaccia (1710–1778): Gaetano's father, Gennaro, was also a luthier.
+> 1. Gennaro Vinaccia (1710–1778): Gaetano's father, Gennaro, was also a luthier.
 > He was known for his high-quality instruments, including violins, cellos, and double basses.
-> Antonio Vinaccia (1734–1796): Gaetano's uncle, Antonio, was another skilled luthier in the family.
+> 2. Antonio Vinaccia (1734–1796): Gaetano's uncle, Antonio, was another skilled luthier in the family.
 > He worked in Naples and was particularly known for his violins.
-> Carlo Vinaccia (1789–1845): Gaetano's son, Carlo, followed in his father's footsteps and became a luthier.
+> 3. Carlo Vinaccia (1789–1845): Gaetano's son, Carlo, followed in his father's footsteps and became a luthier.
 > He worked in Naples and was known for his innovative designs and techniques.
+>
 > These family members, along with Gaetano, contributed to the Vinaccia family’s reputation as skilled luthiers in Naples during the 18th and 19th centuries.
 > Their instruments are still highly regarded today for their craftsmanship and tone quality.
 > I hope this information helps!
@@ -460,13 +466,14 @@ Realizing the errors in the initial data, we decided to retry the same prompt us
 > Yes, Gaetano Vinaccia (ca. 1759–1831) belonged to a famous family of luthiers from Naples, Italy, known for their work in crafting stringed instruments, particularly mandolins and guitars.
 > The Vinaccia family played a significant role in the development of these instruments during the 18th and 19th centuries.
 > Several of Gaetano Vinaccia’s family members were also involved in the profession of luthiery:
-> Antonio Vinaccia (ca. 1734–1781): Gaetano’s father, was a prominent luthier known for crafting high-quality mandolins and guitars.
+> 1. Antonio Vinaccia (ca. 1734–1781): Gaetano’s father, was a prominent luthier known for crafting high-quality mandolins and guitars.
 > Antonio is believed to have trained Gaetano and contributed to the family’s expertise in instrument making.
-> Gennaro Vinaccia (born 1740, death date unknown): Gaetano’s brother, was another well-known luthier in the family, who made various string instruments.
+> 2. Gennaro Vinaccia (born 1740, death date unknown): Gaetano’s brother, was another well-known luthier in the family, who made various string instruments.
 > His work is often associated with mandolins, and his craftsmanship influenced the development of the Neapolitan mandolin.
-> Pasquale Vinaccia (1806–1882): Gaetano’s son, is probably the most famous of the family.
+> 3. Pasquale Vinaccia (1806–1882): Gaetano’s son, is probably the most famous of the family.
 > Pasquale is credited with several innovations in mandolin construction, including adding metal strings and modernizing the instrument’s structure.
 > His contributions helped shape the modern mandolin and its global popularity.
+>
 > The Vinaccia family as a whole is renowned for its contribution to the evolution of musical instruments, particularly stringed instruments, during the 18th and 19th centuries.
 
 *At this [link](../img/zero-shot-gpt.jpg) you can find a screenshot of the prompt we used.*
@@ -487,6 +494,9 @@ WHERE {
   FILTER regex(?label, "Vinaccia", "i")
 }
 ```
+The results of this query are visitable at the following URL: [Vinaccia Family Query Results](https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fmandolino+%3Flabel+%3FauthorLabel+%3Fdescription%0D%0AWHERE+%7B%0D%0A++%3Fmandolino+rdf%3Atype+arco%3AMovableCulturalProperty+%3B%0D%0A+++++++++++++rdfs%3Alabel+%3Flabel+%3B%0D%0A+++++++++++++a-cd%3AhasAuthor+%3Fauthor+.%0D%0A++%3Fauthor+rdfs%3Alabel+%3FauthorLabel+.%0D%0A%0D%0A++FILTER+%28REGEX%28%3Flabel%2C+%22mandolino%22%2C+%22i%22%29%29%0D%0A++FILTER+%28REGEX%28%3FauthorLabel%2C+%22vinaccia%22%2C+%22i%22%29%29%0D%0A%0D%0A++OPTIONAL+%7B+%3Fmandolino+core%3Adescription+%3Fdescription+%7D%0D%0A%7D%0D%0AORDER+BY+%28%3Flabel%29%0D%0ALIMIT+50%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on).
+
+
 To accurately represent the familial and professional connections, we created RDF triples using the predicate `a-cd:hasRelatedAgent` to link Gaetano Vinaccia to his relatives:
 
 #### Triple 9
