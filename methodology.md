@@ -404,7 +404,34 @@ WHERE {
 }
 ORDER BY ?techniqueLabel
 ```
+#### Query 10
 
+```sparql
+PREFIX arco: <https://w3id.org/arco/ontology/arco/>
+PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/>
+
+SELECT DISTINCT ?technique ?techniqueLabel
+WHERE {
+  ?technique rdf:type a-dd:TechnicalCharacteristic ;
+             rdfs:label ?techniqueLabel .
+  FILTER (REGEX(?techniqueLabel, "osso", "i"))
+}
+ORDER BY ?techniqueLabel
+```
+
+### Query 11
+```sparql
+PREFIX arco: <https://w3id.org/arco/ontology/arco/>
+PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/>
+
+SELECT DISTINCT ?technique ?techniqueLabel
+WHERE {
+  ?technique rdf:type a-dd:TechnicalCharacteristic ;
+             rdfs:label ?techniqueLabel .
+  FILTER (REGEX(?techniqueLabel, "incollato", "i"))
+}
+ORDER BY ?techniqueLabel
+```
 
 These entities were linked to the mandolin entity using the predicate `a-dd:hasMaterialOrTechnique`, as illustrated below:
 
