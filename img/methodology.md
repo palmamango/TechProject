@@ -416,34 +416,3 @@ a-dd:hasMaterialOrTechnique
 ```
 
 
-## Shifting Focus to the Vinaccia Family of Luthiers
-In the next phase of our project, we shifted our focus from the works themselves to the authors. From previous prompts, we knew that the Vinaccia family consisted of multiple luthiers. While exploring the page for Gaetano Vinaccia, we noticed that there were no links to other family members who were also involved in the same profession.
-
-### 4.1 Initial Research and Errors
-Initially, we knew from previous prompts that the Vinaccia family was composed of several notable luthiers. However, while exploring the entry for Gaetano Vinaccia, we noticed that there were no direct connections between Gaetano and other family members who were also involved in the craft of lutherie. Recognizing this as a gap in the Knowledge Graph, we decided to gather more information on Gaetano’s family to address this oversight.
-To begin, we used LLaMA 3.1 with a zero-shot prompting technique to obtain details about Gaetano's family members. The goal was to gather information about other family members involved in the same profession. However, upon conducting further research online, particularly using the [Wikipedia page about the Vinaccia family](https://it.wikipedia.org/wiki/Vinaccia_(famiglia)), we discovered that some of the information provided by LLaMA was incorrect or incomplete.
-
-> #### Prompt:
->
-> Can you tell me if Gaetano Vinaccia (1759/1831 ca), the 18th-century luthier, had any family members who were also involved in the creation of musical instruments?
-> Please identify any relatives related to him, especially those who shared his profession as a luthier.
-
-
-
-
->  #### LLM Response:
->
-> Gaetano Vinaccia (1759–1831) was indeed a renowned Italian luthier from Naples.
-> After conducting research, I found that he came from a family of skilled craftsmen, including several relatives who were also involved in the creation of musical instruments.
-> Here are a few notable family members who shared his profession as a luthier:
-> Gennaro Vinaccia (1710–1778): Gaetano's father, Gennaro, was also a luthier.
-> He was known for his high-quality instruments, including violins, cellos, and double basses.
-> Antonio Vinaccia (1734–1796): Gaetano's uncle, Antonio, was another skilled luthier in the family.
-> He worked in Naples and was particularly known for his violins.
-> Carlo Vinaccia (1789–1845): Gaetano's son, Carlo, followed in his father's footsteps and became a luthier.
-> He worked in Naples and was known for his innovative designs and techniques.
-> These family members, along with Gaetano, contributed to the Vinaccia family’s reputation as skilled luthiers in Naples during the 18th and 19th centuries.
-> Their instruments are still highly regarded today for their craftsmanship and tone quality.
-> I hope this information helps!
-
-*At this [link](../img/generated-knowledge.png) you can find a screenshot of the prompt we used.*
