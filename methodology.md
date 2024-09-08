@@ -420,6 +420,7 @@ ORDER BY ?techniqueLabel
 ```
 
 ### Query 11
+
 ```sparql
 PREFIX arco: <https://w3id.org/arco/ontology/arco/>
 PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/>
