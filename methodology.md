@@ -419,7 +419,7 @@ WHERE {
 ORDER BY ?techniqueLabel
 ```
 
-### Query 11
+#### Query 11
 
 ```sparql
 PREFIX arco: <https://w3id.org/arco/ontology/arco/>
