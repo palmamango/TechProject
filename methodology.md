@@ -382,13 +382,11 @@ After utilizing the generated knowledge technique via GPT-4o to gather informati
 *At this [link](../img/generated-knowledge.png) you can find a screenshot of the prompt we used.*
 
 ### 3.1  RDF Triples for Construction Techniques
-We proceeded to add the following entities by querying the ArCo Knowledge Graph in order to represent the construction techniques:
+We proceeded to query the following entities in the ArCo Knowledge Graph so to represent the construction techniques:
 
 - Turtle Shell Inlay ("Tartaruga a intarsio")
 - Bone Carving ("Osso intaglio")
 - Glued ("Incollato")
-
-Through these queries:
 
 #### Query 9
 
