@@ -447,3 +447,57 @@ To begin, we used LLaMA 3.1 with a zero-shot prompting technique to obtain detai
 > I hope this information helps!
 
 *At this [link](../img/zero-shot-llama.jpg) you can find a screenshot of the prompt we used.*
+
+### 4.2 Correcting Information with GPT-4o
+
+Realizing the errors in the initial data, we decided to retry the same prompt using GPT-4o, a more advanced model. This time, the results were much more accurate and aligned with the information found in reliable online sources. With this updated data, we identified other members of the Vinaccia family who worked as luthiers, including Antonio and Pasquale Vinaccia, and their roles within the family’s lutherie tradition.
+
+> #### Prompt:
+> Can you tell me if Gaetano Vinaccia (1759/1831 ca), the 18th-century luthier, had any family members who were also involved in the creation of musical instruments?
+> Please identify any relatives related to him, especially those who shared his profession as a luthier.
+
+> #### LLM Response:
+> Yes, Gaetano Vinaccia (ca. 1759–1831) belonged to a famous family of luthiers from Naples, Italy, known for their work in crafting stringed instruments, particularly mandolins and guitars.
+> The Vinaccia family played a significant role in the development of these instruments during the 18th and 19th centuries.
+> Several of Gaetano Vinaccia’s family members were also involved in the profession of luthiery:
+> Antonio Vinaccia (ca. 1734–1781): Gaetano’s father, was a prominent luthier known for crafting high-quality mandolins and guitars.
+> Antonio is believed to have trained Gaetano and contributed to the family’s expertise in instrument making.
+> Gennaro Vinaccia (born 1740, death date unknown): Gaetano’s brother, was another well-known luthier in the family, who made various string instruments.
+> His work is often associated with mandolins, and his craftsmanship influenced the development of the Neapolitan mandolin.
+> Pasquale Vinaccia (1806–1882): Gaetano’s son, is probably the most famous of the family.
+> Pasquale is credited with several innovations in mandolin construction, including adding metal strings and modernizing the instrument’s structure.
+> His contributions helped shape the modern mandolin and its global popularity.
+> The Vinaccia family as a whole is renowned for its contribution to the evolution of musical instruments, particularly stringed instruments, during the 18th and 19th centuries.
+
+*At this [link](../img/zero-shot-gpt.jpg) you can find a screenshot of the prompt we used.*
+
+### 4.3 Querying and Linking Family Members
+
+After gathering the correct information, we constructed a SPARQL query to search for all members of the Vinaccia family who were listed as luthiers in the ArCo Knowledge Graph. The query focused on identifying agents with the profession of luthier, filtered by the "Vinaccia" family name:
+
+#### Query 9
+```sparql
+PREFIX arco: <https://w3id.org/arco/ontology/arco/>
+PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>
+
+SELECT ?agent ?label
+WHERE {
+  ?agent rdfs:label ?label ;
+     	a-cd:hasProfession <https://w3id.org/arco/resource/Profession/liutaio> .
+  FILTER regex(?label, "Vinaccia", "i")
+}
+```
+To accurately represent the familial and professional connections, we created RDF triples using the predicate a-cd:hasRelatedAgent to link Gaetano Vinaccia to his relatives:
+
+#### Triple 9
+```rdf
+<https://w3id.org/arco/resource/Agent/20daa63c8a36d12f8de17bca4878f52a>
+	a-cd:hasRelatedAgent
+<https://w3id.org/arco/resource/Agent/81b81ce033d0cb08ac2951058010757b>
+```
+#### Triple 10
+```rdf
+<https://w3id.org/arco/resource/Agent/20daa63c8a36d12f8de17bca4878f52a>
+	a-cd:hasRelatedAgent
+<https://w3id.org/arco/resource/Agent/3dfdb946dd9216679faba8298391e872>
+```
