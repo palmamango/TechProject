@@ -340,7 +340,7 @@ Based on the results from these queries, we identified mandolins crafted by thes
 ```
 
 
-It is important to note that, similar to the previous instances of the mandolin, these particular mandolins also lack a connection to the arco:MusicHeritage class. This connection can be made by creating additional RDF triples in a manner analogous to what we have done earlier ([Triple 1 - 2](#triple-1)). However, to avoid redundancy, we have not included these additional triples here.
+It is important to note that, similar to the previous instances of the mandolin, these particular mandolins also lack a connection to the `arco:MusicHeritage` class. This connection can be made by creating additional RDF triples in a manner analogous to what we have done earlier ([Triple 1 - 2](#triple-1)). However, to avoid redundancy, we have not included these additional triples here.
 
 ## Step 3: Enriching the Knowledge Graph with Mandolin Construction Techniques
 After utilizing the generated knowledge technique via GPT-4o to gather information on the construction techniques used by Gaetano Vinaccia for his mandolins, we decided to add additional entities to the ArCo Knowledge Graph, representing the specific materials and techniques used in the construction of these instruments. These techniques were linked to the mandolin entity through the predicate `a-dd:hasMaterialOrTechnique`.
