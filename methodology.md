@@ -118,7 +118,7 @@ One such result, for example, was:
 
 ### 2.1 Assigning the Correct Class
 
-Upon identifying an entity representing the mandolin by Chiocca Filippo (as well as the other mandolins), we noted that it lacked a connection to the arco:MusicHeritage class. To address this, we created new RDF triples to establish this link:
+Upon identifying an entity representing the mandolin by Chiocca Filippo (as well as the other mandolins), we noted that it lacked a connection to the `arco:MusicHeritage` class. To address this, we created new RDF triples to establish this link:
 
 #### Triple 1
 
