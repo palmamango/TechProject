@@ -431,7 +431,7 @@ To begin, we used LLaMA 3.1 with a zero-shot prompting technique to obtain detai
 
 
 
->  #### LLM Response:
+> #### LLM Response:
 >
 > Gaetano Vinaccia (1759–1831) was indeed a renowned Italian luthier from Naples.
 > After conducting research, I found that he came from a family of skilled craftsmen, including several relatives who were also involved in the creation of musical instruments.
