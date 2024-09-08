@@ -382,7 +382,7 @@ After utilizing the generated knowledge technique via GPT-4o to gather informati
 *At this [link](../img/generated-knowledge.png) you can find a screenshot of the prompt we used.*
 
 ### 3.1  RDF Triples for Construction Techniques
-We proceeded to add the following entities to the Knowledge Graph to represent the construction techniques:
+We proceeded to add the following entities by querying the ArCo Knowledge Graph in order to represent the construction techniques:
 
 - Turtle Shell Inlay ("Tartaruga a intarsio")
 - Bone Carving ("Osso intaglio")
@@ -527,7 +527,7 @@ Realizing the errors in the initial data, we decided to retry the same prompt us
 
 After gathering the correct information, we constructed a SPARQL query to search for all members of the Vinaccia family who were listed as luthiers in the ArCo Knowledge Graph. The query focused on identifying agents with the profession of luthier, filtered by the "Vinaccia" family name:
 
-#### Query 9
+#### Query 12
 ```sparql
 PREFIX arco: <https://w3id.org/arco/ontology/arco/>
 PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>
