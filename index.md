@@ -35,7 +35,7 @@ Explore the detailed steps we took, from querying the ArCo Knowledge Graph to en
 
 ## Conclusions
 
--
+Read about our final thoughts in the [Conclusions](./conclusions.md) section.
 
 <br>
 
