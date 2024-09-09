@@ -348,7 +348,7 @@ After utilizing the generated knowledge technique via GPT-4o to gather informati
 > ### Prompt:
 >
 > Considering that the mandolin by Gaetano Vinaccia (18th century) has a body made of maple wood, turtle shell, and bone 
-> ornaments, as well as other features like a turtle shell plate around the soundhole, what construction techniques might > have been used to create this instrument? You may also include historical or traditional information on the lutherie 
+> ornaments, as well as other features like a turtle shell plate around the soundhole, what construction techniques might have been used to create this instrument? You may also include historical or traditional information on the lutherie 
 > techniques used in Naples during the 18th century.
 
 > ### LLM Response:
